@@ -8,7 +8,7 @@ export class UsersService {
     constructor(
         @InjectModel(User.name) private userModel: Model<UserDocument>,
     ) { }
-    async create(userDto: { email: string, password: string }): Promise<User> {
+    async create(userDto: { email: string, password: string }): Promise<UserDocument> {
         const check = await this.userModel.findOne({ email: userDto.email })
         if (check) throw new ConflictException("Email Exists");
         return this.userModel.create(userDto);
