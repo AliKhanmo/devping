@@ -5,7 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { MonitorModule } from './monitor/monitor.module';
+import { MonitorsModule } from './monitor/monitor.module';
 
 @Module({
   imports: [
@@ -13,7 +13,7 @@ import { MonitorModule } from './monitor/monitor.module';
     MongooseModule.forRoot(process.env.MONGODB_URI!),
     AuthModule,
     UsersModule,
-    MonitorModule,
+    MonitorsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
