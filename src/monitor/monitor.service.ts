@@ -38,4 +38,8 @@ export class MonitorsService {
         if (result.deletedCount === 0)
             throw new NotFoundException('Monitor not found or unauthorized');
     }
+
+    async findAllActive(): Promise<Monitor[]> {
+        return this.monitorModel.find({ isActive: true }).sort({ createdAt: -1 });
+    }
 }

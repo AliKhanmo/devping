@@ -8,5 +8,6 @@ import { MonitorsService } from './monitor.service';
   imports: [AuthModule, MongooseModule.forFeature([{ name: Monitor.name, schema: MonitorSchema }])],
   controllers: [MonitorsController],
   providers: [MonitorsService],
+  exports: [MonitorsService]
 })
 export class MonitorsModule { }

@@ -6,6 +6,9 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { MonitorsModule } from './monitor/monitor.module';
+import { RabbitmqModule } from './rabbitmq/rabbitmq.module';
+import { SchedulerModule } from './scheduler/scheduler.module';
+import { WorkerModule } from './worker/worker.module';
 
 @Module({
   imports: [
@@ -14,6 +17,9 @@ import { MonitorsModule } from './monitor/monitor.module';
     AuthModule,
     UsersModule,
     MonitorsModule,
+    RabbitmqModule,
+    SchedulerModule,
+    WorkerModule,
   ],
   controllers: [AppController],
   providers: [AppService],
