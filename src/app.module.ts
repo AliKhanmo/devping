@@ -9,6 +9,7 @@ import { MonitorsModule } from './monitor/monitor.module';
 import { RabbitmqModule } from './rabbitmq/rabbitmq.module';
 import { SchedulerModule } from './scheduler/scheduler.module';
 import { WorkerModule } from './worker/worker.module';
+import { LogsModule } from './logs/logs.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { WorkerModule } from './worker/worker.module';
     RabbitmqModule,
     SchedulerModule,
     WorkerModule,
+    LogsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
